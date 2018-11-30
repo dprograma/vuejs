@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vue.js Project</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	<div id="app">
+		<h1>{{count}}</h1>
+		<button @click="CountUp" class="btn btn-primary">Count Up</button>
+		<button @click="CountDown" class="btn btn-primary">Count Down</button>
+		<img :src="url" :alt="title" :title="title">
+	</div>
+<script type="text/javascript" src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+<script>
+	var app = new Vue({
+		el:'#app',
+		data:{
+			message:'Hello to Vue World!',
+			count:0
+		},
+		methods:{
+			CountUp:function(){
+				this.count += 1
+			},
+			CountDown:function(){
+				this.count -= 1
+			}
+		}
+	})
+</script>
+</body>
+</html>
